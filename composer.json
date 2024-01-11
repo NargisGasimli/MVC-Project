@@ -1,0 +1,14 @@
+{
+    "name": "nargi/mvc_framework",
+    "autoload": {
+        "psr-4": {
+            "app\\": "./"
+        }
+    },
+    "authors": [
+        {
+            "name": "Nargis Gasimli"
+        }
+    ],
+    "require": {}
+}
