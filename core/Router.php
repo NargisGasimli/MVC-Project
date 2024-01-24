@@ -22,23 +22,23 @@ class Router{
     }
     
     public function resolve(){
+        $params = [];
         $path = $this->request->getPath();
-        $method = $this->request->getMethod();
+        $method = $this->request->method();
         $callback = $this->routes[$method][$path] ?? false;
         if($callback === false){
             $this->response->ResponseCode(404);
-            $params = [];
             return $this->renderView('_404', $params);
 
         }
         if(is_string($callback)){
-            $params = [];
             return $this->renderView($callback, $params);
         }
         if (is_array($callback)) {
-            $callback[0] = new $callback[0];
+            Application::$app->controller = new $callback[0];
+            $callback[0] = Application::$app->controller;
         }
-        return call_user_func($callback);
+        return call_user_func($callback, $this->request);
         // return call_user_func($callback);
         // var_dump("<pre>");
         // var_dump($callback);
@@ -47,7 +47,6 @@ class Router{
     }
 
     public function renderView($view, $params){
-     
         $leyoutContent = $this->layoutContent();
         $renderOnlyView = $this->renderOnlyView($view, $params);
         return str_replace('{{content}}', $renderOnlyView, $leyoutContent);
@@ -55,8 +54,9 @@ class Router{
     }
     
     public function layoutContent(){
+        $layout = Application::$app->controller->layout;
         ob_start();
-        include_once Application::$ROOT_DIR."/views/layouts/main.php";
+        include_once Application::$ROOT_DIR."/views/layouts/$layout.php";
         return ob_get_clean();
     }
     public function renderOnlyView($view, $params){
