@@ -1,5 +1,21 @@
 <h1>Register Form</h1>
-<form action="" method="post">
+<?php $form = \app\core\form\FORM::begin('', "post");?>
+
+<div class="row">
+  <div class="col">
+    <?php echo $form->field($model, 'firstname')?>
+  </div>
+  <div class="col">
+    <?php echo $form->field($model, 'lastname')?>
+  </div>
+</div>
+<?php echo $form->field($model, 'email')?>
+<?php echo $form->field($model, 'password')->passwordField()?>
+<?php echo $form->field($model, 'confirm_password')->passwordField()?>
+<button type="submit" class="btn btn-primary">Submit</button>
+<?php \app\core\form\FORM::end(); ?>
+
+<!-- <form action="" method="post">
   <div class="row">
     <div class="col">
       <div class="form-group">
@@ -27,4 +43,4 @@
     <input type="password" name = "confirm_password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+</form> -->
