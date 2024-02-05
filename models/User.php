@@ -45,4 +45,15 @@ class User extends DbModel
     {
         return ['firstname', 'lastname', 'email', 'password', 'status'];
     }
+
+    public function label(): array
+    {
+        return [
+            'firstname' => 'First Name',
+            'lastname' => 'Last Name',
+            'email' => 'Email',
+            'password' => 'Password',
+            'confirm_password' => 'Confirm Password',
+        ];
+    }
 }

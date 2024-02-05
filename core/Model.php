@@ -23,6 +23,16 @@ abstract class Model{
 
     public array $errors = [];
 
+    public function label(): array
+    {
+        return [];
+    }
+
+    public function getLabel($attribute)
+    {
+        return $this->label()[$attribute] ?? $attribute;
+    }
+
     public function validate(){
         foreach($this->rules() as $attribute => $rules){
             // [
@@ -51,6 +61,7 @@ abstract class Model{
                     $this->addError($attribute, self::RULES_MAX, $rule);
                 }
                 if($ruleName === self::RULES_MATCH && $value != $this->{$rule['match']}){
+                    $rule['match'] = $this->getLabel($rule['match']);
                     $this->addError($attribute, self::RULES_MATCH, $rule);
                 }
                 if($ruleName === self::RULES_UNIQUE){
@@ -62,7 +73,7 @@ abstract class Model{
                     $statement->execute();
                     $record = $statement->fetchObject();
                     if($record){
-                        $this->addError($attribute, self::RULES_UNIQUE, ['field' => $attribute]);
+                        $this->addError($attribute, self::RULES_UNIQUE, ['field' => $this->getLabel($attribute)]);
                     }
                 }   
             }
