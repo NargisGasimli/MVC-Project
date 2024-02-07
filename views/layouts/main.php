@@ -1,4 +1,6 @@
-<?php  use app\core\Application;  ?>
+<?php  use app\core\Application;  
+
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -25,26 +27,40 @@
         <a class="nav-link" href="/contact">Contact</a>
       </li>
     </ul>
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="/login">Login</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/register">Register</a>
-      </li>
-    </ul>
-  </div>
-</nav>
-  </head>
-  <body>
-    <div class="container">
-    <?php if(Application::$app->session->getFlash('success')): ?>
-      <div class = "alert alert-success">
-        <?php echo Application::$app->session->getFlash('success'); ?>
-      </div>
-    <?php endif; ?>
-      {{content}}
+    <?php if (Application::isGuest()): ?>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/login">Login</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/register">Register</a>
+                </li>
+            </ul>
+        <?php else: ?>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/profile">
+                        Profile
+                    </a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/logout">
+                        Welcome <?php echo Application::$app->user->getDisplayName() ?> (Logout)
+                    </a>
+                </li>
+            </ul>
+        <?php endif; ?>
     </div>
+</nav>
+
+<div class="container">
+    <?php if (Application::$app->session->getFlash('success')): ?>
+        <div class="alert alert-success">
+            <p><?php echo Application::$app->session->getFlash('success') ?></p>
+        </div>
+    <?php endif; ?>
+    {{content}}
+</div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
