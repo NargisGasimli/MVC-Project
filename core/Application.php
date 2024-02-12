@@ -13,8 +13,9 @@ class Application{
     public Session $session;
     public Database $db;
     public ?DbModel $user;
+    public $layout = 'main';
     public static $app;
-    public Controller $controller;
+    public ?Controller $controller = null;
 
     public function __construct($rootPath, array $config)
     {
@@ -37,7 +38,14 @@ class Application{
     }
 
     public function run(){
-        echo $this->router->resolve();
+        try{
+            echo $this->router->resolve();
+        }catch(\Exception $e){
+            $this->response->ResponseCode($e->getCode());
+            echo $this->router->renderView('_error', [
+                'exception' => $e
+            ]);
+        }
     }
 
     public function getController(){
