@@ -1,8 +1,12 @@
 <?php 
-  /** @var \app\models\User*/ 
+  /** @var \app\models\User
+   *  @var $this \app\core\view
+   * */ 
+  
 ?>
 
-<h1>Register Form</h1>
+<<title><?php echo $this->title = 'Register'; ?></title>
+
 <?php $form = \app\core\form\FORM::begin('', "post");?>
 
 <div class="row">

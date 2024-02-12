@@ -13,6 +13,8 @@ class Application{
     public Session $session;
     public Database $db;
     public ?DbModel $user;
+
+    public View $view;
     public $layout = 'main';
     public static $app;
     public ?Controller $controller = null;
@@ -27,6 +29,7 @@ class Application{
         $this->response = new Response;
         $this->db = new Database($config['db']);
         $this->router = new Router($this->request, $this->response);
+        $this->view = new View();
 
         $primaryValue = $this->session->get('user');
         if($primaryValue){
@@ -42,7 +45,7 @@ class Application{
             echo $this->router->resolve();
         }catch(\Exception $e){
             $this->response->ResponseCode($e->getCode());
-            echo $this->router->renderView('_error', [
+            echo $this->view->renderView('_error', [
                 'exception' => $e
             ]);
         }

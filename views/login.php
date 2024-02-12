@@ -1,10 +1,12 @@
 <?php 
-  /** @var \app\models\User */ 
+  /** @var \app\models\User 
+   *  @var $this \app\core\view
+   * */ 
 
   use app\core\form\Form;
 ?>
 
-<h1>Login</h1>
+<title><?php echo $this->title = 'Login'; ?></title>
 
 <?php $form = Form::begin('', 'post') ?>
     <?php echo $form->field($model, 'email') ?>

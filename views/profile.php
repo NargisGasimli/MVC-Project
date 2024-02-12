@@ -1,1 +1,5 @@
-<h1>Profile</h1>
+<?php
+/** @var $this \app\core\view */
+?>
+
+<title><?php echo $this->title = 'Profile'; ?></title>
