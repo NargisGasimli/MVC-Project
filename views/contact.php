@@ -1,22 +1,17 @@
 <?php
-/** @var $this \app\core\view */
+/** @var $this \app\core\view  */
+
+use app\core\form\TextAreaField;
 ?>
 
-
+<h1>Contact us</h1>
 <title><?php echo $this->title = 'Contact'; ?></title>
-<form action="" method="post">
-  <div class="form-group">
-    <label for="exampleInputSubject" class="form-label">Subject</label>
-    <input type="text" name = "subject" class="form-control" id="exampleInputSubject" aria-describedby="SubjectHelp">
-  </div>
-  <div class="form-group">
-    <label for="exampleInputEmail1" class="form-label">Email address</label>
-    <input type="email" name = "email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-  </div>
-  <div class="form-group">
-    <label for="exampleInputText" class="form-label">Body</label>
-    <textarea id="w3review" class="form-control" name="body">
-    </textarea>
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+
+<?php $form = \app\core\form\FORM::begin('', "post");?>
+
+<?php echo $form->field($model, 'subject')?>
+<?php echo $form->field($model, 'email')?>
+<?php echo new TextAreaField($model, 'body')?>
+<button type="submit" class="btn btn-primary">Submit</button>
+
+<?php \app\core\form\FORM::end(); ?>

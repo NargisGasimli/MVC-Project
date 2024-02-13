@@ -5,6 +5,7 @@
 
   use app\core\form\Form;
 ?>
+<h1>Login</h1>
 
 <title><?php echo $this->title = 'Login'; ?></title>
 

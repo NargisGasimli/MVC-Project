@@ -4,8 +4,9 @@
    * */ 
   
 ?>
+<h1>Register</h1>
 
-<<title><?php echo $this->title = 'Register'; ?></title>
+<title><?php echo $this->title = 'Register'; ?></title>
 
 <?php $form = \app\core\form\FORM::begin('', "post");?>
 
