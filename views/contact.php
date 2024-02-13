@@ -1,17 +1,17 @@
 <?php
-/** @var $this \app\core\view  */
+/** @var $this \Nirya\PhpMvcCore\view  */
 
-use app\core\form\TextAreaField;
+use Nirya\PhpMvcCore\form\TextAreaField;
 ?>
 
 <h1>Contact us</h1>
 <title><?php echo $this->title = 'Contact'; ?></title>
 
-<?php $form = \app\core\form\FORM::begin('', "post");?>
+<?php $form = \Nirya\PhpMvcCore\form\FORM::begin('', "post");?>
 
 <?php echo $form->field($model, 'subject')?>
 <?php echo $form->field($model, 'email')?>
 <?php echo new TextAreaField($model, 'body')?>
 <button type="submit" class="btn btn-primary">Submit</button>
 
-<?php \app\core\form\FORM::end(); ?>
+<?php \Nirya\PhpMvcCore\form\FORM::end(); ?>

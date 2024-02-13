@@ -1,6 +1,6 @@
 <?php
 
-use app\core\Application;
+use Nirya\PhpMvcCore\Application;
 
 class m0001_initials{
 

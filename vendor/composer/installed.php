@@ -3,7 +3,7 @@
         'name' => 'nargi/mvc_framework',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '19ecc7ef6e8fd1a0594e132e0addc1593c464ba5',
+        'reference' => '415868ed3112f0911320e8d5282605bb7183295d',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -22,10 +22,21 @@
         'nargi/mvc_framework' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '19ecc7ef6e8fd1a0594e132e0addc1593c464ba5',
+            'reference' => '415868ed3112f0911320e8d5282605bb7183295d',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'nirya/php-mvc-core' => array(
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
+            'reference' => '82f92bc575cfa92674ec646fde14839880e610b4',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../nirya/php-mvc-core',
+            'aliases' => array(
+                0 => '9999999-dev',
+            ),
             'dev_requirement' => false,
         ),
         'phpoption/phpoption' => array(

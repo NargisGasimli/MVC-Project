@@ -2,10 +2,10 @@
 
 namespace app\controllers;
 
-use app\core\Application;
-use app\core\Controller;
-use app\core\Request;
-use app\core\Response;
+use Nirya\PhpMvcCore\Application;
+use Nirya\PhpMvcCore\Controller;
+use Nirya\PhpMvcCore\Request;
+use Nirya\PhpMvcCore\Response;
 use app\models\LoginForm;
 use app\models\User;
 

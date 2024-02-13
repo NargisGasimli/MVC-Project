@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fae34d0c875786a32b2c7557570840bd",
+    "content-hash": "bf07948e9d847838d84bb1529150b1a7",
     "packages": [
         {
             "name": "graham-campbell/result-type",
@@ -67,6 +67,34 @@
                 }
             ],
             "time": "2023-11-12T22:16:48+00:00"
+        },
+        {
+            "name": "nirya/php-mvc-core",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/NargisGasimli/nirya-php-mvc-core.git",
+                "reference": "82f92bc575cfa92674ec646fde14839880e610b4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/NargisGasimli/nirya-php-mvc-core/zipball/82f92bc575cfa92674ec646fde14839880e610b4",
+                "reference": "82f92bc575cfa92674ec646fde14839880e610b4",
+                "shasum": ""
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Nirya\\PhpMvcCore\\": "."
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "support": {
+                "issues": "https://github.com/NargisGasimli/nirya-php-mvc-core/issues",
+                "source": "https://github.com/NargisGasimli/nirya-php-mvc-core/tree/master"
+            },
+            "time": "2024-02-13T11:53:31+00:00"
         },
         {
             "name": "phpoption/phpoption",
@@ -479,7 +507,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "nirya/php-mvc-core": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

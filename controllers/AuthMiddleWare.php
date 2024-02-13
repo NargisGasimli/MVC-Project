@@ -2,9 +2,9 @@
 
 namespace app\controllers;
 
-use app\core\Application;
-use app\core\exception\ForbiddenException;
-use app\core\middlewares\BaseMiddleWare;
+use Nirya\PhpMvcCore\Application;
+use Nirya\PhpMvcCore\exception\ForbiddenException;
+use Nirya\PhpMvcCore\middlewares\BaseMiddleWare;
 
 class AuthMiddleWare extends BaseMiddleWare{
 

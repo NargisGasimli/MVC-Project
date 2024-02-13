@@ -1,7 +1,7 @@
 <?php
-/** @var $this \app\core\view */
+/** @var $this \Nirya\PhpMvcCore\view */
 
-use app\core\Application;  
+use Nirya\PhpMvcCore\Application;  
 ?>
 <!doctype html>
 <html lang="en">

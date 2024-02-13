@@ -1,9 +1,9 @@
 <?php 
   /** @var \app\models\User 
-   *  @var $this \app\core\view
+   *  @var $this \Nirya\PhpMvcCore\view
    * */ 
 
-  use app\core\form\Form;
+  use Nirya\PhpMvcCore\form\Form;
 ?>
 <h1>Login</h1>
 

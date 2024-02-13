@@ -1,6 +1,6 @@
 <?php 
   /** @var \app\models\User
-   *  @var $this \app\core\view
+   *  @var $this \Nirya\PhpMvcCore\view
    * */ 
   
 ?>
@@ -8,7 +8,7 @@
 
 <title><?php echo $this->title = 'Register'; ?></title>
 
-<?php $form = \app\core\form\FORM::begin('', "post");?>
+<?php $form = \Nirya\PhpMvcCore\form\FORM::begin('', "post");?>
 
 <div class="row">
   <div class="col">
@@ -22,7 +22,7 @@
 <?php echo $form->field($model, 'password')->passwordField()?>
 <?php echo $form->field($model, 'confirm_password')->passwordField()?>
 <button type="submit" class="btn btn-primary">Submit</button>
-<?php \app\core\form\FORM::end(); ?>
+<?php \Nirya\PhpMvcCore\form\FORM::end(); ?>
 
 <!-- <form action="" method="post">
   <div class="row">

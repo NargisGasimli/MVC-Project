@@ -2,8 +2,8 @@
 
 namespace app\models;
 
-use app\core\Application;
-use app\core\Model;
+use Nirya\PhpMvcCore\Application;
+use Nirya\PhpMvcCore\Model;
 
 class LoginForm extends Model{
 

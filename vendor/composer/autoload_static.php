@@ -27,6 +27,10 @@ class ComposerStaticInit5397ab7c3db65878c09eca5384d590aa
         array (
             'PhpOption\\' => 10,
         ),
+        'N' => 
+        array (
+            'Nirya\\PhpMvcCore\\' => 17,
+        ),
         'G' => 
         array (
             'GrahamCampbell\\ResultType\\' => 26,
@@ -57,6 +61,10 @@ class ComposerStaticInit5397ab7c3db65878c09eca5384d590aa
         'PhpOption\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpoption/phpoption/src/PhpOption',
+        ),
+        'Nirya\\PhpMvcCore\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/nirya/php-mvc-core',
         ),
         'GrahamCampbell\\ResultType\\' => 
         array (

@@ -1,5 +1,5 @@
 <?php
-/** @var $this \app\core\view */
+/** @var $this \Nirya\PhpMvcCore\view */
 ?>
 <h1>Profile</h1>
 

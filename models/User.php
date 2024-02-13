@@ -2,7 +2,7 @@
 
 namespace app\models;
 
-use app\core\UserModel;
+use Nirya\PhpMvcCore\UserModel;
 
 class User extends UserModel
 {
