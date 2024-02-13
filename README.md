@@ -1,7 +1,3 @@
-Certainly! Below is a sample description for your MVC project on GitHub that also uses Composer:
-
----
-
 MVC PROJECT
 
 **Description:**
