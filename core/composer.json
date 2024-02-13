@@ -1,0 +1,9 @@
+{
+    "name": "nirya/php-mvc-core",
+    "autoload": {
+        "psr-4": {
+            "Nirya\\PhpMvcCore\\": "src/"
+        }
+    },
+    "require": {}
+}
